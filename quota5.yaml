@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  creationTimestamp: "2023-11-17T09:18:49Z"
+  name: quota5
+  namespace: zad5
+  resourceVersion: "61412"
+  uid: 071960fe-b23d-4b64-8bf8-c1f295db7f5d
+spec: {}
+status: {}
