@@ -8,8 +8,8 @@ spec:
       run: php-apache
   template:
     metadata:
+      namespace: zad5
       labels:
-	namespace: zad4
         run: php-apache
     spec:
       containers:
@@ -17,13 +17,7 @@ spec:
         image: registry.k8s.io/hpa-example
         ports:
         - containerPort: 80
-        resources:
-          limits:
-            cpu: 250m
-	    memory: 250Mi
-          requests:
-            cpu: 150m
-	    memory: 150Mi
+        resources: {}
 ---
 apiVersion: v1
 kind: Service
@@ -36,4 +30,3 @@ spec:
   - port: 80
   selector:
     run: php-apache
-
