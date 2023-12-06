@@ -9,11 +9,11 @@ kubectl create quota quota5 -n zad5 -o yaml --hard=cpu=2,memory=1.5G,pods=10 --d
 kubectl apply -f quota5.yaml
 ```
 ![Alt text](image-4.png)
-2. 
+2. Tworzenie poda worker:
 ```
 kubectl run worker -n zad5 --image=nginx -o yaml --dry-run=client > worker.yaml
 ```
-Do pliku konfiguracyjnego w sekksci ***resources*** dodajemy ograniczenia zasobów:
+Do pliku konfiguracyjnego w sekcji ***resources*** dodajemy ograniczenia zasobów:
 ```limits:
      memory:  200Mi
      cpu:  200m
